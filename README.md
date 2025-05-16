@@ -20,3 +20,10 @@ npm install --dev
 export Stage=Xxx
 cat cdk.json.template |  envsubst > cdk.json
 ```
+
+## poetry のインストールと設定
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+poetry config virtualenvs.in-project true
+```
