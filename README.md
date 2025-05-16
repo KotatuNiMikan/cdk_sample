@@ -1,14 +1,22 @@
-# Welcome to your CDK TypeScript project
+# 開発環境初期設定
 
-This is a blank project for CDK development with TypeScript.
+## git 設定
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+```bash
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+git config --global core.editor vim
+```
 
-## Useful commands
+## npmインストール
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+```bash
+npm install --dev
+```
+
+## cdkの設定ファイル作成
+
+```bash
+export Stage=Xxx
+cat cdk.json.template |  envsubst > cdk.json
+```
