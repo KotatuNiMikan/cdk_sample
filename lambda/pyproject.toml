@@ -6,7 +6,7 @@ authors = [
     {name = "hiroshi-maruo",email = "mobu.otoko18@gmail.com"}
 ]
 readme = "README.md"
-requires-python = "3.13.1"
+requires-python = ">=3.13.1"
 dependencies = [
 ]
 

@@ -8,14 +8,17 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
+    "test-lambda": "poetry -C lambda run pytest",
     "cdk": "cdk",
-    "prepare": "husky"
+    "prepare": "husky && npm run prepare-lambda",
+    "prepare-lambda": "poetry -C lambda install --all-group"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
       "dprint fmt",
       "dprint check"
-    ]
+    ],
+    "*.py": ["poetry -C lambda run ruff format", "poetry -C lambda run ruff check"]
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
