@@ -1,0 +1,6 @@
+{
+  "python.autoComplete.extraPaths": [
+    "lambda",
+    "lambda/.venv/lib/python3.13/site-packages"
+  ]
+}

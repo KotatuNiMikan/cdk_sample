@@ -11,7 +11,10 @@ export class LambdaStack extends cdk.Stack {
       runtime: cdk.aws_lambda.Runtime.PYTHON_3_13,
       bundling: {
         // translates to `rsync --exclude='.venv'`
-        assetExcludes: [".venv"],
+        assetExcludes: [".venv", ".pytest_cache", ".ruff_cache", "**/test/*", "**/conftest.py", "__pycache__"],
+        buildArgs: {
+          "POETRY_VERSION": "2.1.3",
+        },
       },
     });
   }
